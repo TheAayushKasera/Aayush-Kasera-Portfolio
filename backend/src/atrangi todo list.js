@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const router = new express.Router();
-
+require("dotenv").config();
 // Allow requests from any origin
 router.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -17,7 +17,11 @@ router.use(express.json());
 
 // Connect to MongoDB database
 const tododb = mongoose.createConnection(
-  "mongodb+srv://theaayushkasera:995511995511@cluster0.uxcefmf.mongodb.net/?retryWrites=true&w=majority"
+  "mongodb+srv://" +
+    process.env.db_user1 +
+    ":" +
+    process.env.db_pass1 +
+    "@cluster0.uxcefmf.mongodb.net/?retryWrites=true&w=majority"
 );
 
 // Define a MongoDB schema for the Listmodel

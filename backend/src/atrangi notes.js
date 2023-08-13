@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const notesrouter = express.Router();
-
+require("dotenv").config();
 // Allow requests from any origin
 notesrouter.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -17,7 +17,11 @@ notesrouter.use(express.json());
 
 // Connect to MongoDB database
 const notesdb = mongoose.createConnection(
-  "mongodb+srv://atranginotes:995511995511@cluster0.1300hac.mongodb.net/?retryWrites=true&w=majority"
+  "mongodb+srv://" +
+    process.env.db_user2 +
+    ":" +
+    process.env.db_pass2 +
+    "@cluster0.1300hac.mongodb.net/?retryWrites=true&w=majority"
 );
 
 // Define a MongoDB schema for the Listmodel
