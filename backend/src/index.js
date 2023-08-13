@@ -17,5 +17,5 @@ app.use(notesrouter);
 app.use(router);
 
 app.listen(port, () => {
-  console.log("listening on port 8000");
+  console.log("listening on port " + port);
 });
