@@ -23,6 +23,7 @@ const AtrangiNotes = () => {
   const getData = async () => {
     try {
       const response = await fetch("/api/notes-get");
+
       if (response.ok) {
         const data = await response.json();
         setNotearr(data);
