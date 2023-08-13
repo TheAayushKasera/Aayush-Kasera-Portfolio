@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "proxy": "http://localhost:8000/",
+  "proxy": "https://aayush-kasera-portfolio-backend.onrender.com",
   "private": true,
   "dependencies": {
     "@coreui/coreui": "^5.0.0-alpha.1",
