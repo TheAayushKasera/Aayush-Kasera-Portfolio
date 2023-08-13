@@ -1,0 +1,203 @@
+/* index.css */
+
+/* Import Oswald font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
+
+/* Root container */
+.todo-box {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 5vh;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+}
+
+/* Heading */
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Input form */
+.in-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.in {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #444;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.in-btn {
+  flex-shrink: 0;
+  margin-left: 10px;
+  padding: 10px;
+  background-color: #ff9800;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Todo list */
+.list-item-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: #444;
+  font-size: 18px;
+}
+
+.list-item-box label {
+  flex-grow: 1;
+  overflow-wrap: break-word;
+  margin-right: 10px;
+}
+
+.delete-btn {
+  flex-shrink: 0;
+  margin-left: 10px;
+  padding: 8px;
+  width: 24px;
+  height: 24px;
+  background-color: #e91e63;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 320px) {
+  /* Mobile Portrait View */
+  .todo-box {
+    padding: 15px;
+  }
+
+  .heading {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .in,
+  .in-btn {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .list-item-box {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 576px) {
+  /* Extra Small Devices (Mobile Phones) */
+  .todo-box {
+    padding: 15px;
+  }
+
+  .heading {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .in,
+  .in-btn {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .list-item-box {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  /* Small Devices (Tablets) */
+  .heading {
+    font-size: 22px;
+  }
+
+  .in,
+  .in-btn {
+    font-size: 15px;
+    padding: 9px;
+  }
+
+  .list-item-box {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  /* Medium Devices (Laptops, Tablets in Landscape) */
+  .heading {
+    font-size: 24px;
+  }
+
+  .in,
+  .in-btn {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .list-item-box {
+    font-size: 18px;
+  }
+}
+
+/* Dark Mode - Default Styles */
+body {
+  background-color: #222;
+  color: #fff;
+}
+
+.todo-box {
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.in {
+  border-color: #555;
+  background-color: #444;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.list-item-box {
+  border-color: #555;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark mode for delete button */
+.delete-btn.dark-mode {
+  background-color: #e91e63;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

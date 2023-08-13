@@ -1,0 +1,83 @@
+.clock-title {
+  width: 100%;
+  height: 10%;
+  background-color: brown;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clock-container {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clock-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.clock-alarm {
+  width: 10vw;
+  border: 10px solid black;
+  border-radius: 5px 5px 0 0;
+}
+.clock-div {
+  width: 40vw;
+  height: 40vh;
+  background-color: wheat;
+  color: black;
+  border-radius: 50px;
+  border: 15px solid rgb(219, 159, 80);
+  padding: 2vh 2vw 2vh 2vw;
+  box-shadow: inset 5px 5px 20px rgb(129, 122, 97);
+}
+
+.clock-head {
+  width: 100%;
+  height: 20%;
+  display: flex;
+}
+.clock-day-div {
+  width: 50%;
+  text-align: left;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.clock-date-div {
+  width: 50%;
+  height: 100%;
+  text-align: right;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.clock-time-div {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 96px;
+  font-weight: bold;
+  height: 80%;
+}
+.clock-stand-box {
+  width: 40vw;
+  height: 5vh;
+  display: flex;
+  justify-content: space-around;
+}
+.clock-stand {
+  height: 100%;
+  background-color: black;
+  width: 15%;
+}
