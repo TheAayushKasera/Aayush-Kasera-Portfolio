@@ -58,6 +58,7 @@ router.post("/api/todo-post", async (req, res) => {
 // Route to handle GET requests to fetch data from the database
 router.get("/api/todo-get", async (req, res) => {
   const result = await readData(); // Read data from the database
+  console.log(result);
   res.send(result); // Send the fetched data as the response
 });
 

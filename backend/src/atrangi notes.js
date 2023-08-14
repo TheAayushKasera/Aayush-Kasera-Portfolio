@@ -52,6 +52,7 @@ const deleteData = async (_id) => {
 notesrouter.post("/api/notes-post", async (req, res) => {
   const title = req.body.title;
   const description = req.body.description;
+  console.log(title, description);
   await createData({ title, description }); // Create data and store it in the database
   res.send("Item added to Database"); // Send a response back to the client
 });
@@ -59,6 +60,7 @@ notesrouter.post("/api/notes-post", async (req, res) => {
 // Route to handle GET requests to fetch data from the database
 notesrouter.get("/api/notes-get", async (req, res) => {
   const result = await readData(); // Read data from the database
+  console.log(result);
   res.send(result); // Send the fetched data as the response
 });
 
