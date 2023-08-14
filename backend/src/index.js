@@ -7,7 +7,7 @@ const buildpath = "../../frontend/build";
 const cors = require("cors");
 app.use(
   cors({
-    origin: "https://aayush-kasera-portfolio.onrender.com/",
+    origin: ["https://aayush-kasera-portfolio.onrender.com/"],
   })
 );
 
