@@ -5,11 +5,7 @@ const router = require("./atrangi todo list");
 const path = require("path");
 const buildpath = "../../frontend/build";
 const cors = require("cors");
-app.use(
-  cors({
-    origin: ["https://aayush-kasera-portfolio.onrender.com/"],
-  })
-);
+app.use(cors());
 
 const port = process.env.PORT || 8000;
 app.use(express.static(path.join(__dirname, buildpath)));

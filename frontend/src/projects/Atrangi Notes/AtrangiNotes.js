@@ -22,7 +22,9 @@ const AtrangiNotes = () => {
 
   const getData = async () => {
     try {
-      const response = await fetch("/api/notes-get");
+      const response = await fetch(
+        "https://aayush-kasera-portfolio-backend.onrender.com/api/notes-get"
+      );
 
       if (response.ok) {
         console.log(response);
@@ -42,13 +44,16 @@ const AtrangiNotes = () => {
       setSnackbarOpen(true);
     } else {
       try {
-        const response = await fetch("/api/notes-post", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ title: title, description: description }),
-        });
+        const response = await fetch(
+          "https://aayush-kasera-portfolio-backend.onrender.com/api/notes-post",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ title: title, description: description }),
+          }
+        );
 
         if (response.ok) {
           setSnackbarMessage(`New Note added`);
@@ -70,13 +75,16 @@ const AtrangiNotes = () => {
 
   const deleteData = async (id) => {
     try {
-      const response = await fetch("/api/notes-delete", {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ _id: id }),
-      });
+      const response = await fetch(
+        "https://aayush-kasera-portfolio-backend.onrender.com/api/notes-delete",
+        {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ _id: id }),
+        }
+      );
 
       if (response.ok) {
         setSnackbarMessage(`Note deleted from list`);

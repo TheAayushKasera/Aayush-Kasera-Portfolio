@@ -20,13 +20,16 @@ const Todo = () => {
 
   const deleteData = async (e) => {
     try {
-      const response = await fetch("/api/todo-delete", {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ _id: e.target.value }),
-      });
+      const response = await fetch(
+        "https://aayush-kasera-portfolio-backend.onrender.com/api/todo-delete",
+        {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ _id: e.target.value }),
+        }
+      );
 
       if (response.ok) {
         const data = await response.text();
@@ -46,7 +49,9 @@ const Todo = () => {
 
   const getData = async () => {
     try {
-      const response = await fetch("/api/todo-get");
+      const response = await fetch(
+        "https://aayush-kasera-portfolio-backend.onrender.com/api/todo-get"
+      );
       if (response.ok) {
         const data = await response.json();
         setItemlist(data);
@@ -64,13 +69,16 @@ const Todo = () => {
       setSnackbarOpen(true);
     } else {
       try {
-        const response = await fetch("/api/todo-post", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ item: item }),
-        });
+        const response = await fetch(
+          "https://aayush-kasera-portfolio-backend.onrender.com/api/todo-post",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ item: item }),
+          }
+        );
 
         if (response.ok) {
           setSnackbarMessage(`${item} added in List`);
