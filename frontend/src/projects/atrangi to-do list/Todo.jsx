@@ -48,7 +48,6 @@ const Todo = () => {
     try {
       const response = await fetch("/api/todo-get");
       if (response.ok) {
-        console.log(response.text());
         const data = await response.json();
         setItemlist(data);
       }
