@@ -3,12 +3,10 @@ import Paper from "@mui/material/Paper";
 import axios from "axios";
 import TextField from "@mui/material/TextField";
 import NavBar from "./NavBar.js";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
 import DataBox from "./DataBox";
-import Footer from "./footer";
 
 const Weather = () => {
+  document.title = "Atrangi Weather App";
   const [data, setData] = useState({
     location: {
       name: "Jaipur",
@@ -55,7 +53,7 @@ const Weather = () => {
     // Function for fetching data from API
     await axios
       .get(
-        `http://api.weatherapi.com/v1/current.json?key=2e422bff75ab4c6ba4a181307221107&q=${city}&aqi=yes`
+        `https://api.weatherapi.com/v1/current.json?key=2e422bff75ab4c6ba4a181307221107&q=${city}&aqi=yes`
       )
       .then((response) => setData(response.data))
       .catch((error) => {
@@ -66,9 +64,7 @@ const Weather = () => {
     //Fetch data from API whenever city changes
     fetchApi();
   }, [city]);
-  useEffect(() => {
-    document.title = "Atrangi Weather App";
-  }, []);
+
   return (
     //Body structure
     <>
