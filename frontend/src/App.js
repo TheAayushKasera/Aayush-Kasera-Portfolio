@@ -26,13 +26,14 @@ const App = () => {
         ></Route>
         <Route exact path="/atrangi-weather" element={<Weather />}></Route>
         <Route
+          exact
           path="/atrangi-code-editor"
           element={<AtrangiCodeEditor />}
         ></Route>
-        <Route path="/atrangi-todo-list" element={<Todo />}></Route>
-        <Route path="/atrangi-notes" element={<AtrangiNotes />}></Route>
-        <Route path="/slot-machine" element={<Slot />}></Route>
-        <Route path="/digital-clock" element={<Clock />}></Route>
+        <Route exact path="/atrangi-todo-list" element={<Todo />}></Route>
+        <Route exact path="/atrangi-notes" element={<AtrangiNotes />}></Route>
+        <Route exact path="/slot-machine" element={<Slot />}></Route>
+        <Route exact path="/digital-clock" element={<Clock />}></Route>
       </Routes>
     </>
   );
