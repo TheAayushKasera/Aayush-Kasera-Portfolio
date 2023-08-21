@@ -19,7 +19,8 @@ const App = () => {
     );
     try {
       if (response.ok) {
-        console.log(await response.text);
+        console.log(await response);
+        console.log("backend start");
       }
     } catch (err) {
       console.log(err);
