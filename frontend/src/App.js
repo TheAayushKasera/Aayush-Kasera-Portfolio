@@ -10,7 +10,24 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slot from "./projects/Slot machine/Slot";
 import Clock from "./projects/digital clock/Clock";
+import { useEffect } from "react";
+
 const App = () => {
+  const backendstart = async () => {
+    const response = await fetch(
+      "https://aayush-kasera-portfolio-backend.onrender.com/"
+    );
+    try {
+      if (response.ok) {
+        console.log(await response.text);
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  useEffect(() => {
+    backendstart();
+  }, []);
   return (
     <>
       <Routes>

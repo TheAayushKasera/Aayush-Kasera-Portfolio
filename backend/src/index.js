@@ -11,7 +11,9 @@ const port = process.env.PORT || 8000;
 app.use(express.static(path.join(__dirname, buildpath)));
 app.use(notesrouter);
 app.use(router);
-
+app.get("/", (req, res) => {
+  res.send("backend start");
+});
 app.listen(port, () => {
   console.log("listening on port " + port);
 });
