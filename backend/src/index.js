@@ -14,6 +14,11 @@ app.use(router);
 app.get("/", (req, res) => {
   res.send("backend start");
 });
+
+app.get("/api/corn-job", (req, res) => {
+  console.log("Corn-job api called");
+  res.send("portfolio backend works");
+});
 app.listen(port, () => {
   console.log("listening on port " + port);
 });

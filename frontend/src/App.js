@@ -14,6 +14,7 @@ import { useEffect } from "react";
 
 const App = () => {
   const backendstart = async () => {
+    console.log("Backend Request");
     const response = await fetch(
       "https://aayush-kasera-portfolio-backend.onrender.com/"
     );
