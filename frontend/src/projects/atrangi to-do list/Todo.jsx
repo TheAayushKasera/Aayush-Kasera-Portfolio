@@ -21,7 +21,7 @@ const Todo = () => {
   const deleteData = async (e) => {
     try {
       const response = await fetch(
-        "https://aayush-kasera-portfolio-backend.onrender.com/api/todo-delete",
+        `${process.env.REACT_APP_backend_port}api/todo-delete`,
         {
           method: "DELETE",
           headers: {
@@ -50,7 +50,7 @@ const Todo = () => {
   const getData = async () => {
     try {
       const response = await fetch(
-        "https://aayush-kasera-portfolio-backend.onrender.com/api/todo-get"
+        `${process.env.REACT_APP_backend_port}api/todo-get`
       );
       if (response.ok) {
         const data = await response.json();
@@ -70,7 +70,7 @@ const Todo = () => {
     } else {
       try {
         const response = await fetch(
-          "https://aayush-kasera-portfolio-backend.onrender.com/api/todo-post",
+          `${process.env.REACT_APP_backend_port}api/todo-post`,
           {
             method: "POST",
             headers: {

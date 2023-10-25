@@ -14,10 +14,8 @@ import { useEffect } from "react";
 
 const App = () => {
   const backendstart = async () => {
-    console.log("Backend Request");
-    const response = await fetch(
-      "https://aayush-kasera-portfolio-backend.onrender.com/"
-    );
+    console.log("Backend Request", process.env.REACT_APP_backend_port);
+    const response = await fetch(process.env.backend_port);
     try {
       if (response.ok) {
         console.log(await response);

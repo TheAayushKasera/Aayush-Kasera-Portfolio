@@ -21,9 +21,10 @@ const AtrangiNotes = () => {
   }, []);
 
   const getData = async () => {
+    console.log("process", process.env.REACT_APP_backend_port);
     try {
       const response = await fetch(
-        "https://aayush-kasera-portfolio-backend.onrender.com/api/notes-get"
+        `${process.env.REACT_APP_backend_port}api/notes-get`
       );
 
       if (response.ok) {
@@ -45,7 +46,7 @@ const AtrangiNotes = () => {
     } else {
       try {
         const response = await fetch(
-          "https://aayush-kasera-portfolio-backend.onrender.com/api/notes-post",
+          `${process.env.REACT_APP_backend_port}api/notes-post`,
           {
             method: "POST",
             headers: {
@@ -76,7 +77,7 @@ const AtrangiNotes = () => {
   const deleteData = async (id) => {
     try {
       const response = await fetch(
-        "https://aayush-kasera-portfolio-backend.onrender.com/api/notes-delete",
+        `${process.env.REACT_APP_backend_port}api/notes-delete`,
         {
           method: "DELETE",
           headers: {
